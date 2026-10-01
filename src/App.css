@@ -1,0 +1,201 @@
+/* ===== Variables de color ===== */
+:root {
+  --lila: #9b7ed9;
+  --lila-claro: #c4b0e8;
+  --azul-cielo: #87ceeb;
+  --negro: #1a1a2e;
+  --gris-claro: #f5f5f7;
+  --gris-borde: #e0e0e0;
+  --gris-texto: #666;
+  --blanco: #ffffff;
+}
+
+/* ===== Reset y base ===== */
+* {
+  margin: 1;
+  padding: 1;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--gris-claro);
+  color: var(--negro);
+  line-height: 1.6;
+}
+
+/* ===== Layout principal ===== */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--lila) 0%, var(--azul-cielo) 100%);
+  border-radius: 12px;
+  color: var(--blanco);
+  font-size: 2rem;
+}
+
+/* ===== Formulario ===== */
+.formulario {
+  background: var(--blanco);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border: 2px solid var(--gris-borde);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.formulario input:focus {
+  outline: none;
+  border-color: var(--lila);
+}
+
+.formulario button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--lila) 0%, var(--azul-cielo) 100%);
+  color: var(--blanco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Sección siguiente ===== */
+.siguiente {
+  background: var(--blanco);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(155, 126, 217, 0.15);
+  border: 2px solid var(--lila-claro);
+  margin-bottom: 20px;
+}
+
+.siguiente h2 {
+  color: var(--lila);
+  margin-bottom: 10px;
+}
+
+.siguiente p {
+  color: var(--gris-texto);
+  margin-bottom: 15px;
+}
+
+.siguiente button {
+  width: 100%;
+  padding: 12px;
+  background: var(--negro);
+  color: var(--blanco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.siguiente button:hover {
+  opacity: 0.85;
+}
+
+/* ===== Mensaje vacío ===== */
+.vacio {
+  text-align: center;
+  padding: 30px;
+  background: var(--blanco);
+  border-radius: 12px;
+  border: 2px dashed var(--gris-borde);
+  color: #888;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* ===== Lista de turnos ===== */
+.lista {
+  list-style: none;
+  background: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.lista li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+.lista li:last-child {
+  border-bottom: none;
+}
+
+.lista li:hover {
+  background-color: var(--gris-claro);
+}
+
+.lista .numero {
+  background: var(--azul-cielo);
+  color: var(--negro);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.lista .nombre {
+  font-weight: 500;
+  flex: 1;
+}
+
+.lista .motivo {
+  color: var(--gris-texto);
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  main {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .lista li {
+    flex-wrap: wrap;
+  }
+
+  .lista .motivo {
+    width: 100%;
+    margin-left: 0;
+  }
+}
